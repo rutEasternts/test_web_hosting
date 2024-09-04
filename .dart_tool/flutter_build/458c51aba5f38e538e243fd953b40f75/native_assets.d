@@ -1,0 +1,1 @@
+ /Users/imac/Documents/flutterData/Projects/mcs_accounting_flutter_web/.dart_tool/flutter_build/458c51aba5f38e538e243fd953b40f75/native_assets.yaml: 

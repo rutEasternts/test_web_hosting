@@ -1,0 +1,4 @@
+#Tue Jul 09 17:47:52 IST 2024
+base.0=/Users/imac/Documents/flutterData/Projects/mcs_accounting_flutter_web/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
