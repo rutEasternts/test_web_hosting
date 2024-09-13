@@ -6,10 +6,11 @@ import 'package:mcs_accounting_flutter_web/feature/presentation/pages/splash/spl
 import 'package:mcs_accounting_flutter_web/feature/presentation/pages/splash/splash_tablet.dart';
 import 'package:mcs_accounting_flutter_web/feature/presentation/pages/splash/splash_web.dart';
 import 'package:mcs_accounting_flutter_web/util/common_widgets/responsive_layout_widget.dart';
+import 'package:mcs_accounting_flutter_web/util/constants/string_constants.dart';
 
 import '../../../../router/route_constant.dart';
 import '../../../../router/routes.dart';
-
+import 'dart:js' as js;
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -20,20 +21,22 @@ class SplashPage extends StatefulWidget {
 
 class _SplashPageState extends State<SplashPage>   {
 
-  late BuildContext buildContext;
+  // late BuildContext buildContext;
 
 
   @override
   void initState() {
     super.initState();
-    buildContext=context;
+    // buildContext=context;
     // Route route = MaterialPageRoute(builder: (context) => const CloudSignIn());
     // Navigator.pushAndRemoveUntil(context, route, (Route<dynamic> route) => false);
+
+    js.context.callMethod('setDocumentTitle', [StringConstant.appName]); // displays the name of each page on tab bar
 
     Future.delayed(const Duration(seconds: 3)).then((value) {
 
       // context.go(AppRouterPath.cloudSignIn);
-      AppRouter.goRouter.push(AppRouterPath.cloudSignIn);
+      // AppRouter.goRouter.push(AppRouterPath.cloudSignIn);
 
       // js.context.callMethod('setDocumentTitle', [RouteNames.routeNameCloudSignIn]);
       // Navigator.pop(context);
@@ -63,11 +66,11 @@ class _SplashPageState extends State<SplashPage>   {
       // Navigator.pushReplacement(buildContext, MaterialPageRoute(builder: (context) => CloudSignIn()));
 
 
-      // buildContext.go(AppRouterPath.cloudSignIn);
+      // buildContext.push(AppRouterPath.cloudSignIn);
 
 
 
-      // context.go(AppRouterPath.cloudSignIn);
+      context.go(AppRouterPath.cloudSignIn); // displays the name of each page in url
       // context.pop();
 
       // GoRouter.of(buildContext).pushReplacementNamed(RouteNames.routeNameCloudSignIn);

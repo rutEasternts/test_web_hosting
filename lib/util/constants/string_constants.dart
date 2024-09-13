@@ -1,6 +1,6 @@
 class StringConstant {
 
-  static const String appName = 'Optima Value PRO';
+  static const String appName = 'MCS';
   static const String mcsCloudSignIn = 'MCS Cloud Sign In';
   static const String cloudSignInDesc = 'Sign in to your MCS Cloud with your Client ID and account number';
   static const String clientId = 'Client ID';

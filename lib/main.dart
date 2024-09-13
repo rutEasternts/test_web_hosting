@@ -1,3 +1,5 @@
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -18,6 +20,7 @@ final RouteObserver<PageRoute> routeObserver = RouteObserver<PageRoute>();
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
 
   await di.init();
   usePathUrlStrategy();// for not using # in urls
@@ -40,18 +43,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(context);
-    // return ResponsiveSizer(
-    //   builder: (context, orientation, screenType) {
-    //     return MaterialApp.router(
-    //       // routerConfig: AppRouter.goRouter,
-    //       routeInformationProvider: AppRouter.goRouter.routeInformationProvider,
-    //       routeInformationParser: AppRouter.goRouter.routeInformationParser,
-    //       routerDelegate: AppRouter.goRouter.routerDelegate,
-    //       theme: AppTheme.lightTheme(context),
-    //     );
-    //   },
-    // );
-
     return LayoutBuilder(
         builder: (context,constraints) {
           return ScreenUtilInit(

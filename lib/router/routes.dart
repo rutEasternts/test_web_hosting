@@ -15,6 +15,17 @@ class AppRouter{
     initialLocation: AppRouterPath.splash,
     routes: routes,
     navigatorKey: getIt<NavigationService>().navigatorKey,
+    // redirect: (context, state) {
+    //   final bool isLoggedIn = false; // Example condition for authentication
+    //
+    //   // Redirect to login if not logged in and trying to access the home screen
+    //   if (!isLoggedIn && state.subloc == '/') {
+    //     return '/login';
+    //   }
+    //
+    //   // No redirection needed
+    //   return null;
+    // },
     // observers: <NavigatorObserver>[routeObserver],
   );
 

@@ -14,7 +14,7 @@ import 'package:mcs_accounting_flutter_web/util/common_widgets/input_text_field.
 
 import '../../../../../main.dart';
 import '../../../../../router/route_constant.dart';
-import 'dart:js' as js;
+// import 'dart:js' as js;
 
 import '../../../../../router/routes.dart';
 
@@ -107,15 +107,15 @@ class CloudSignInWidget extends StatelessWidget {
                         // Navigator.push(context, MaterialPageRoute(builder: (context) => AccountSignIn()));
                         // Navigator.pushNamed(context, '/account_sign_in');
 
-                        // context.go(AppRouterPath.accountSignIn);
+                        context.go(AppRouterPath.accountSignIn);
 
-
-                        AppRouter.goRouter.push(AppRouterPath.accountSignIn);
+                        // context.push(AppRouterPath.accountSignIn);
+                        // AppRouter.goRouter.push(AppRouterPath.accountSignIn);
 
                         // Navigator.pushNamed(context, '/account_sign_in');
 
                         // // AppRouter.goRouter.goNamed(MyAppRouteNameConstants.routeNameAccountSignIn);  // this i
-                        // js.context.callMethod('setDocumentTitle', [RouteNames.routeNameAccountSignIn]);
+                        // js.context.callMethod('setDocumentTitle', [RouteNames.routeNameCloudSignIn]); // will change the name on tab bar
                       },
                       child: Text(
                         StringConstant.signIn,

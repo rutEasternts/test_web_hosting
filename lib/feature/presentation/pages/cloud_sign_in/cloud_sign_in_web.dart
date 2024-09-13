@@ -4,6 +4,9 @@ import 'package:mcs_accounting_flutter_web/feature/presentation/pages/cloud_sign
 import 'package:mcs_accounting_flutter_web/feature/presentation/pages/cloud_sign_in/widgets/slider_widget.dart';
 import 'package:mcs_accounting_flutter_web/feature/presentation/state_management/could_sign_in slider_notifier.dart';
 import 'package:provider/provider.dart';
+import 'dart:js' as js;
+
+import '../../../../router/route_constant.dart';
 
 class CloudSignInWeb extends StatefulWidget {
   CloudSignInWeb({super.key, required this.constraints});
@@ -21,6 +24,7 @@ class _CloudSignInWebState extends State<CloudSignInWeb> {
     constraints=widget.constraints;
     sliderIndexNotifier=Provider.of<CloudSignInSliderNotifier>(context,listen: false);
     sliderIndexNotifier.init();
+    js.context.callMethod('setDocumentTitle', [RouteNames.routeNameCloudSignIn]);
     super.initState();
   }
 
